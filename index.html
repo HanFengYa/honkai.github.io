@@ -1,117 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>游戏模块</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .module {
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin: 10px;
-        }
-        .image-container {
-            position: relative;
-            text-align: center;
-            overflow: hidden;
-        }
-        .image-container img {
-            max-width: 100%;
-            animation: imageAnimation 5s infinite;
-        }
-        .enter-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .submodule {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        @keyframes imageAnimation {
-            0%, 100% {
-                opacity: 0;
-            }
-            20%, 80% {
-                opacity: 1;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>烟雨斋</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  #header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  #menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    padding: 10px;
+  }
+  #content {
+    text-align: center;
+    padding: 20px;
+  }
+  #slideshow img {
+    max-width: 100%;
+    height: auto;
+  }
+  #slideshow button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
-    <div class="module">
-        <h2>星穹铁道</h2>
-        <div class="image-container">
-            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/09/6c0e9aaa5b9471e32316d11284edb710_2698450106633206665.png">
-            <button class="enter-button" onclick="window.location.href='link_to_star_railway.html'">进入</button>
-        </div>
-        <div class="submodule">
-            <h3>抽卡模拟</h3>
-            <!-- 抽卡模拟内容 -->
-        </div>
-        <div class="submodule">
-            <h3>星穹铁道角色伤害模拟</h3>
-            <!-- 角色伤害模拟内容 -->
-        </div>
-        <div class="submodule">
-            <h3>星穹铁道战斗模拟（文字版）</h3>
-            <!-- 战斗模拟内容 -->
-        </div>
-    </div>
+<div id="header">
+  <h1>烟雨斋</h1>
+</div>
+<div id="menu">
+  <a href="#starRailway">星穹铁道</a>
+  <a href="#honkai3">崩坏3</a>
+  <a href="#genshin">原神</a>
+  <a href="#about">关于此网站</a>
+</div>
+<div id="content">
+  <div id="slideshow">
+    <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/09/6c0e9aaa5b9471e32316d11284edb710_2698450106633206665.png" alt="星穹铁道">
+    <button onclick="gotoStarRailway()">进入</button>
+  </div>
+  <p>星穹铁道</p>
+</div>
+<script>
+  const images = [
+    "https://webstatic.mihoyo.com/upload/op-public/2021/10/09/6c0e9aaa5b9471e32316d11284edb710_2698450106633206665.png",
+    "https://webstatic.mihoyo.com/upload/op-public/2021/10/03/663fe95dff54044d7cd5d3a355f61bf7_6089937633900261947.png",
+    "https://webstatic.mihoyo.com/upload/op-public/2021/10/03/58574b8c47e058787cc24049413b7cea_7872872512863208275.png"
+  ];
+  const titles = ["星穹铁道", "崩坏3", "原神"];
+  let currentIndex = 0;
 
-    <div class="module">
-        <h2>崩坏3</h2>
-        <div class="image-container">
-            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/663fe95dff54044d7cd5d3a355f61bf7_6089937633900261947.png" alt="崩坏3图片" id="honkai3Image">
-            <button class="enter-button" onclick="window.location.href='link_to_honkai3.html'">进入</button>
-        </div>
-        <div class="submodule">
-            <h3>抽卡模拟</h3>
-            <!-- 抽卡模拟内容 -->
-        </div>
-        <div class="submodule">
-            <h3>人物志</h3>
-            <!-- 人物志内容 -->
-        </div>
-        <div class="submodule">
-            <h3>识之律者女士万岁！</h3>
-            <!-- 律者女士内容 -->
-        </div>
-    </div>
+  function gotoStarRailway() {
+    window.location.href = "#starRailway";
+  }
 
-    <div class="module">
-        <h2>原神</h2>
-        <div class="image-container">
-            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/58574b8c47e058787cc24049413b7cea_7872872512863208275.png" alt="原神图片" id="genshinImage"> <!-- 使用占位图像 -->
-            <button class="enter-button" onclick="window.location.href='link_to_genshin.html'">进入</button>
-        </div>
-        <div class="submodule">
-            <h3>暂无</h3>
-            <!-- 暂无内容 -->
-        </div>
-        <div class="submodule">
-            <h3>暂无</h3>
-            <!-- 暂无内容 -->
-        </div>
-        <div class="submodule">
-            <h3>暂无</h3>
-            <!-- 暂无内容 -->
-        </div>
-    </div>
+  function changeSlide() {
+    const slideshow = document.getElementById("slideshow");
+    const img = slideshow.querySelector("img");
+    const button = slideshow.querySelector("button");
+    currentIndex = (currentIndex + 1) % images.length;
+    img.src = images[currentIndex];
+    button.textContent = "进入 " + titles[currentIndex] + " 模块";
+  }
 
-    <div class="module">
-        <h2>关于此网站</h2>
-        <p>就一破游戏辅助网站，能用就用，目前还属于内侧中。</p>
-    </div>
+  setInterval(changeSlide, 5000);
+</script>
 </body>
 </html>
+<style>
+  #starRailway {
+    display: flex;
+  }
+  #starRailway .left {
+    width: 60%;
+  }
+  #starRailway .left img {
+    max-width: 100%;
+    height: auto;
+  }
+  #starRailway .right {
+    width: 40%;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+<div id="content">
+  <div id="starRailway">
+    <div class="left">
+      <img src="https://img.58tg.com/up/allimg/4k/s/03/230601091A15637-0-lp.jpg" alt="星穹铁道">
+    </div>
+    <div class="right">
+      <h2>崩坏星穹铁道</h2>
+      <p>这片银河中有名为「星神」的存在，祂们造就现实，抹消星辰，在无数「世界」中留下祂们的痕迹。你作为一名特殊的旅客，将与继承「开拓」意志的同伴一起，乘坐星穹列车穿越银河，沿着某位「星神」曾经所行之途前进。</p>
+      <a href="https://hsr.hoyoverse.com/zh-cn/home" target="_blank">前往官网</a>
+      <p>暂未开启</p>
+      <p>暂未开启</p>
+    </div>
+  </div>
+</div>
+
+<!-- ... (其他头部内容) ... -->
+<style>
+  /* ... (之前的样式) ... */
+  #honkai3 {
+    display: flex;
+  }
+  #honkai3 .left {
+    width: 40%;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  #honkai3 .right {
+    width: 60%;
+  }
+  #honkai3 .right img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<!-- ... (之前的内容) ... -->
+<div id="content">
+  <div id="honkai3">
+    <div class="left">
+      <h2>崩坏3</h2>
+      <p>在被崩坏侵蚀的世界中，勇敢的少女组成的女武神部队，为守护世界而展开了战斗。为世界上所有的美好而战！</p>
+      <a href="https://honkaiimpact3.hoyoverse.com/global/zh-cn/home" target="_blank">前往官网</a>
+      <p>暂未开启</p>
+      <p>暂未开启</p>
+    </div>
+    <div class="right">
+      <img src="https://pbs.twimg.com/media/FocP_HHaQAEpf2A?format=webp&name=medium" alt="崩坏3">
+    </div>
+  </div>
+</div>
+<!-- ... (其他头部内容) ... -->
+<style>
+  /* ... (之前的样式) ... */
+  #genshin {
+    display: flex;
+  }
+  #genshin .left {
+    width: 60%;
+  }
+  #genshin .left img {
+    max-width: 100%;
+    height: auto;
+  }
+  #genshin .right {
+    width: 40%;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+<!-- ... (之前的内容) ... -->
+<div id="content">
+  <div id="genshin">
+    <div class="left">
+      <img src="https://qianp.com/uploads/images/kind/20230522/20230522134856_91107.jpg" alt="原神">
+    </div>
+    <div class="right">
+      <h2>原神</h2>
+      <p>你将在游戏中探索一个被称作「提瓦特」的幻想世界。在这广阔的世界中，你可以踏遍七国，邂逅性格各异、能力独特的同伴，与他们一同对抗强敌，踏上寻回血亲之路；也可以不带目的地漫游，沉浸在充满生机的世界里，让好奇心驱使自己发掘各个角落的奥秘……直到你与分离的血亲重聚，在终点见证一切事物的沉淀。</p>
+      <a href="https://genshin.hoyoverse.com/en/home" target="_blank">前往官网</a>
+      <p>暂未开启</p>
+      <p>暂未开启</p>
+    </div>
+  </div>
+</div>
+
