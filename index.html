@@ -1,75 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>游戏辅助网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏模块</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .module {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .image-container {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+        .image-container img {
+            max-width: 100%;
+            animation: imageAnimation 5s infinite;
+        }
+        .enter-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .submodule {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        @keyframes imageAnimation {
+            0%, 100% {
+                opacity: 0;
+            }
+            20%, 80% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>游戏辅助网站</h1>
-        <nav>
-            <ul>
-                <li><a href="#xingqiong">星穹铁道</a>
-                    <ul>
-                        <li><a href="#gacha-simulation">抽卡模拟</a></li>
-                        <li><a href="#character-damage">角色伤害模拟</a></li>
-                        <li><a href="#battle-simulation">战斗模拟（文字版）</a></li>
-                    </ul>
-                </li>
-                <li><a href="#bh3">崩坏3</a>
-                    <ul>
-                        <li><a href="#gacha-simulation-bh3">抽卡模拟</a></li>
-                        <li><a href="#character-profiles">人物志</a></li>
-                        <li><a href="#honkai-impact">识之律者女士万岁！</a></li>
-                    </ul>
-                </li>
-                <li><a href="#genshin">原神</a>
-                    <ul>
-                        <li><a href="#">暂无</a></li>
-                        <li><a href="#">暂无</a></li>
-                        <li><a href="#">暂无</a></li>
-                    </ul>
-                </li>
-                <li><a href="#about">关于此网站</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="xingqiong">
-            <h2>星穹铁道</h2>
-            <ul>
-                <li><a href="#gacha-simulation">抽卡模拟</a></li>
-                <li><a href="#character-damage">角色伤害模拟</a></li>
-                <li><a href="#battle-simulation">战斗模拟（文字版）</a></li>
-            </ul>
-        </section>
-        
-        <section id="bh3">
-            <h2>崩坏3</h2>
-            <ul>
-                <li><a href="#gacha-simulation-bh3">抽卡模拟</a></li>
-                <li><a href="#character-profiles">人物志</a></li>
-                <li><a href="#honkai-impact">识之律者女士万岁！</a></li>
-            </ul>
-        </section>
-        
-        <section id="genshin">
-            <h2>原神</h2>
-            <ul>
-                <li><a href="#">暂无</a></li>
-                <li><a href="#">暂无</a></li>
-                <li><a href="#">暂无</a></li>
-            </ul>
-        </section>
-        
-        <section id="about">
-            <h2>关于此网站</h2>
-            <p>就一破游戏辅助网站，能用就用，目前还属于内侧中。</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 游戏辅助网站。保留所有权利。</p>
-    </footer>
+    <div class="module">
+        <h2>星穹铁道</h2>
+        <div class="image-container">
+            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/09/6c0e9aaa5b9471e32316d11284edb710_2698450106633206665.png“alt="星穹铁道图片" id="starRailwayImage">
+            <button class="enter-button" onclick="window.location.href='link_to_star_railway.html'">进入</button>
+        </div>
+        <div class="submodule">
+            <h3>抽卡模拟</h3>
+            <!-- 抽卡模拟内容 -->
+        </div>
+        <div class="submodule">
+            <h3>星穹铁道角色伤害模拟</h3>
+            <!-- 角色伤害模拟内容 -->
+        </div>
+        <div class="submodule">
+            <h3>星穹铁道战斗模拟（文字版）</h3>
+            <!-- 战斗模拟内容 -->
+        </div>
+    </div>
+
+    <div class="module">
+        <h2>崩坏3</h2>
+        <div class="image-container">
+            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/663fe95dff54044d7cd5d3a355f61bf7_6089937633900261947.png" alt="崩坏3图片" id="honkai3Image">
+            <button class="enter-button" onclick="window.location.href='link_to_honkai3.html'">进入</button>
+        </div>
+        <div class="submodule">
+            <h3>抽卡模拟</h3>
+            <!-- 抽卡模拟内容 -->
+        </div>
+        <div class="submodule">
+            <h3>人物志</h3>
+            <!-- 人物志内容 -->
+        </div>
+        <div class="submodule">
+            <h3>识之律者女士万岁！</h3>
+            <!-- 律者女士内容 -->
+        </div>
+    </div>
+
+    <div class="module">
+        <h2>原神</h2>
+        <div class="image-container">
+            <img src="https://webstatic.mihoyo.com/upload/op-public/2021/10/03/58574b8c47e058787cc24049413b7cea_7872872512863208275.png" alt="原神图片" id="genshinImage"> <!-- 使用占位图像 -->
+            <button class="enter-button" onclick="window.location.href='link_to_genshin.html'">进入</button>
+        </div>
+        <div class="submodule">
+            <h3>暂无</h3>
+            <!-- 暂无内容 -->
+        </div>
+        <div class="submodule">
+            <h3>暂无</h3>
+            <!-- 暂无内容 -->
+        </div>
+        <div class="submodule">
+            <h3>暂无</h3>
+            <!-- 暂无内容 -->
+        </div>
+    </div>
+
+    <div class="module">
+        <h2>关于此网站</h2>
+        <p>就一破游戏辅助网站，能用就用，目前还属于内侧中。</p>
+    </div>
 </body>
 </html>
